@@ -1,0 +1,24 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "sass --watch ./assets/scss:./assets/css --style compressed --no-source-map",
+    "git": "git add --all && git commit -m 'Deploy' && git push origin master && echo 'deploy realizado'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViihNeris/C6Bank.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ViihNeris/C6Bank/issues"
+  },
+  "homepage": "https://github.com/ViihNeris/C6Bank#readme",
+  "description": "",
+  "dependencies": {
+    "bootstrap": "^5.2.2"
+  }
+}

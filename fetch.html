@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./assets/js/fetch.js" defer></script>
+    <title>Consultando CEP</title>
+
+    <style>
+        body {
+            background: url('./assets/images/background-form.webp') no-repeat;
+            background-size: 100% 100vh;
+            background-position: center center;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        form {
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            flex-direction: row;
+            justify-content: space-around;
+            background-color: rgba(54, 2, 70, 0.598);
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        form > div{
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1%;
+            color: #FFF;
+        }
+
+        input {
+            width: 400px;
+            border: none;
+            height: 50px;
+            line-height: 50px;
+            font-size: 1em;
+            border-radius: 5px;
+            padding-left: 2%;
+            outline-color: rgb(122, 0, 128);
+            color: #000;
+            margin-top: 1%;
+            background-color: rgba(210, 143, 225, 0.854);
+        }
+
+        input:focus{
+            background-color: rgba(255, 255, 255, 0.834);
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div>
+            <label for="cep">Digite o CEP:
+                <input type="text" id="cep" maxlength="9" pattern="^\d{5}-?\d{3}$" autocomplete="off" required>
+            </label>
+
+            <label for="logradouro">
+                Endereço*
+                <input type="text" id="logradouro" autocomplete="off">
+            </label>
+
+            <label for="numero">
+                Número
+                <input type="text" id="numero" autocomplete="off">
+            </label>
+
+            <label for="complemento">
+                Complemento
+                <input type="text" id="complemento" autocomplete="off">
+            </label>
+        </div>
+        <div>
+            <label for="bairro">
+                Bairro
+                <input type="text" id="bairro" autocomplete="off">
+            </label>
+
+            <label for="localidade">
+                Cidade
+                <input type="text" id="localidade" autocomplete="off">
+            </label>
+
+            <label for="uf">
+                Estado
+                <input type="text" id="uf" autocomplete="off">
+            </label>
+        </div>
+    </form>
+    <div id="resultado"></div>
+</body>
+
+</html>
